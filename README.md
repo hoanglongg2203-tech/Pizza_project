@@ -23,6 +23,7 @@ Gives a high-level snapshot of the business to quickly understand where revenue 
 
 - Small(size) and Veggie(category) are both underperforming consistently across revenue and quantity.
   
+<img width="1409" height="792" alt="image" src="https://github.com/user-attachments/assets/7fc28d7b-8bd8-4c24-a8e1-77af72c24a1d" />
 
 **Page 2: Monthly Performance**
 
@@ -35,6 +36,9 @@ Tracks how the business moves over time and helps identify which months, categor
 - February dipped the hardest at -6.6% before March bounced back at +8.0%.
   
 - September and October declining back to back is a pattern worth watching.
+- 
+<img width="1411" height="790" alt="image" src="https://github.com/user-attachments/assets/09d6aff8-632b-477f-8543-1cf9075a3768" />
+
 
 **Page 3: Customer Behavior**
 
@@ -46,7 +50,10 @@ Helps understand when customers actually show up and how their spending behavior
 
 - Friday is the strongest day of the week, peaking further during summer months (May to July).
 
-- Wednesday shows lower average order value despite steady total sales, meaning customers are buying more units at lower price points rather than fewer higher-value orders
+- Wednesday shows lower average order value despite steady total sales, meaning customers are buying more units at lower price points rather than fewer higher-value orders.
+
+<img width="1408" height="794" alt="image" src="https://github.com/user-attachments/assets/0c05b97a-bfff-4c43-beca-468c2e514a81" />
+
 
 **Recommendations**
 
