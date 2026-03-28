@@ -38,7 +38,7 @@ Tracks how the business moves over time and helps identify which months, categor
 - February dipped the hardest at -6.6% before March bounced back at +8.0%.
   
 - September and October declining back to back is a pattern worth watching.
-- 
+  
 <img width="1411" height="790" alt="image" src="https://github.com/user-attachments/assets/09d6aff8-632b-477f-8543-1cf9075a3768" />
 
 
@@ -55,7 +55,6 @@ Helps understand when customers actually show up and how their spending behavior
 - Wednesday shows lower average order value despite steady total sales, meaning customers are buying more units at lower price points rather than fewer higher-value orders.
 
 <img width="1408" height="794" alt="image" src="https://github.com/user-attachments/assets/0c05b97a-bfff-4c43-beca-468c2e514a81" />
-
 
 **Recommendations**
 
