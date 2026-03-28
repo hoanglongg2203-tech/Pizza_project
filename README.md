@@ -11,6 +11,8 @@ A personal portfolio project analyzing the full-year 2015 sales data of a pizza 
 
 **DAX** — Custom measures including MoM % growth and other performance metrics
 
+**Dashboard Walkthrough:** https://drive.google.com/file/d/1vMTaH0Z4zQlUux4a4cUFQ7Tl4f-TrMrp/view?usp=sharing 
+
 **Data insights**
 
 **Page 1: Sales Overview**
