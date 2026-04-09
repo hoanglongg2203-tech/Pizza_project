@@ -1,9 +1,9 @@
-**Pizza Restaurant Sales Performance Analysis**
+# Pizza Restaurant Sales Performance Analysis
 
 Project Overview
 A personal portfolio project analyzing the full-year 2015 sales data of a pizza restaurant. The goal was to go beyond the numbers, understand what was actually happening in the business, and turn those findings into practical recommendations.
 
- **Tools Used**
+ ## **Tools Used**
 
 - **SQL** — Pulled and cleaned the raw data
 
@@ -11,11 +11,13 @@ A personal portfolio project analyzing the full-year 2015 sales data of a pizza 
 
 - **DAX** — Custom measures including MoM % growth and other performance metrics
 
-**Dashboard Walkthrough:** https://drive.google.com/file/d/1vMTaH0Z4zQlUux4a4cUFQ7Tl4f-TrMrp/view?usp=sharing 
+## **Dashboard**
 
-**Data insights**
+[View Full Dashboard Walkthrough](https://drive.google.com/file/d/1vMTaH0Z4zQlUux4a4cUFQ7Tl4f-TrMrp/view?usp=sharing)
 
-**Page 1: Sales Overview**
+## **Data insights**
+
+### **Page 1: Sales Overview**
 
 Gives a high-level snapshot of the business to quickly understand where revenue is coming from and which products are actually driving it.
 
@@ -27,7 +29,7 @@ Gives a high-level snapshot of the business to quickly understand where revenue 
   
 <img width="1409" height="792" alt="image" src="https://github.com/user-attachments/assets/7fc28d7b-8bd8-4c24-a8e1-77af72c24a1d" />
 
-**Page 2: Monthly Performance**
+### **Page 2: Monthly Performance**
 
 Tracks how the business moves over time and helps identify which months, categories, and sizes are growing or slipping.
 
@@ -42,7 +44,7 @@ Tracks how the business moves over time and helps identify which months, categor
 <img width="1411" height="790" alt="image" src="https://github.com/user-attachments/assets/09d6aff8-632b-477f-8543-1cf9075a3768" />
 
 
-**Page 3: Customer Behavior**
+### **Page 3: Customer Behavior**
 
 Helps understand when customers actually show up and how their spending behavior shifts across different times and days.
   
@@ -56,7 +58,7 @@ Helps understand when customers actually show up and how their spending behavior
 
 <img width="1408" height="794" alt="image" src="https://github.com/user-attachments/assets/0c05b97a-bfff-4c43-beca-468c2e514a81" />
 
-**Recommendations**
+## **Recommendations**
 
 **Address the size imbalance**
 Small is consistently underperforming across both revenue and quantity. A "Buy 1 Get 1" or a Small plus drink bundle could drive trial without heavy discounting. If that moves the needle, it is worth making permanent.
@@ -72,3 +74,10 @@ The 17:00–19:00 slot on Saturday and Sunday quietly outperforms the lunch peak
 
 **Capitalize on July**
 It is the peak month of the year. New launches, upsell campaigns, and high-margin promotions should all be timed around this window when customers are in a spending mood.
+Dataset
+
+## Dataset
+
+- **Source:** [Pizza Place Sales — Kaggle](https://www.kaggle.com/datasets/nextmillionaire/pizza-sales-dataset)
+- **Period:** Full year 2015
+- **Records:** ~48,000 orders
