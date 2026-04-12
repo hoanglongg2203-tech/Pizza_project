@@ -26,7 +26,24 @@ A personal portfolio project analyzing the full-year 2015 sales data of a pizza 
 
 - **Power BI** — Built a 3-page interactive dashboard
 
-- **DAX** — Custom measures including MoM % growth and other performance metrics
+- **DAX Measures** — Custom measures including MoM % growth and other performance metrics
+```
+Avg Value per Order =
+SUM(pizza_sales[total_price])/DISTINCTCOUNT(pizza_sales[order_id])
+
+Avg Sales per Day = 
+DIVIDE(SUM('pizza_sales'[total_price]), DISTINCTCOUNT('pizza_sales'[order_date]))
+
+MoM % = 
+VAR Prev = [Prev month sales]
+RETURN
+IF(OR(ISBLANK(Prev), Prev = 0),BLANK(),
+DIVIDE([Total Sales] - Prev, Prev))
+
+Metric = {("Sales", NAMEOF('pizza_sales'[Sales]), 0),
+("Quantity", NAMEOF('pizza_sales'[Sum Quantity]), 1),
+("Orders", NAMEOF('pizza_sales'[Orders]), 2)}
+```
 
 ## **Dashboard**
 
@@ -77,21 +94,25 @@ Helps understand when customers actually show up and how their spending behavior
 
 ## **Recommendations**
 
-**Address the size imbalance**
-Small is consistently underperforming across both revenue and quantity. A "Buy 1 Get 1" or a Small plus drink bundle could drive trial without heavy discounting. If that moves the needle, it is worth making permanent.
+**Address the size imbalance** 
+
+The Small size is clearly underperforming in both revenue and quantity. Instead of heavy discounting, offering something like a “Buy 1 Get 1” deal or bundling it with a drink could encourage more customers to try it. If this strategy proves effective, it could be considered as a long-term offering.
 
 **Give Chicken and Supreme more spotlight**
-Both categories sell nearly as well as Classic but at a higher price, which means better margin per order. Featuring them more in promotions, combo deals, or social media could naturally shift customers toward higher-value orders without changing anything on the menu.
 
-**Give Veggie a proper identity.**
-A blanket discount probably hurts more than it helps. A "Meatless Monday" promo or a health-focused campaign could build a loyal niche customer base that the restaurant is currently not speaking to at all.
+Chicken and Supreme pizzas perform almost as well as Classic but come at a higher price point, meaning they likely generate better margins. Promoting these categories more actively through combo deals or social media campaigns could gradually shift customer preferences toward higher-value orders.
+
+**Give Veggie a clearer identity**
+
+Veggie pizzas seem to lack a strong positioning. Instead of applying broad discounts, creating targeted campaigns like “Meatless Monday” or promoting them as healthier options could help attract a specific customer segment and build loyalty over time.
 
 **Capture the weekend dinner window**
-The 17:00–19:00 slot on Saturday and Sunday quietly outperforms the lunch peak on those same days, but it gets far less marketing attention. A weekend dinner deal pushed through social media in the late afternoon could be one of the highest-ROI moves available right now.
 
-**Capitalize on July**
-It is the peak month of the year. New launches, upsell campaigns, and high-margin promotions should all be timed around this window when customers are in a spending mood.
-Dataset
+Interestingly, the 17:00–19:00 time slot on weekends performs better than the lunch period on those same days, yet it receives less marketing attention. Running targeted promotions during late afternoons on weekends could be a highly effective way to boost sales.
+
+**Capitalize on July** 
+
+July stands out as the peak sales month. It would be strategic to align new product launches, upselling strategies, and high-margin promotions with this period when customers are more willing to spend.
 
 
 
