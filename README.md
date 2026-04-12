@@ -2,10 +2,27 @@
 
 Project Overview
 A personal portfolio project analyzing the full-year 2015 sales data of a pizza restaurant. The goal was to go beyond the numbers, understand what was actually happening in the business, and turn those findings into practical recommendations.
+## Dataset
+
+- **Source:** [Pizza Place Sales — Kaggle](https://www.kaggle.com/datasets/nextmillionaire/pizza-sales-dataset)
+- **Period:** Full year 2015
 
  ## **Tools Used**
 
-- **SQL** — Pulled and cleaned the raw data
+- **SQL** — Extracted and prepared raw data from the dataset
+  
+ ```sql
+  SELECT 
+      order_date,
+      order_time,
+      pizza_category,
+      pizza_size,
+      pizza_name,
+      unit_price,
+      total_price,
+      quantity
+  FROM pizza_sales
+```
 
 - **Power BI** — Built a 3-page interactive dashboard
 
@@ -76,8 +93,5 @@ The 17:00–19:00 slot on Saturday and Sunday quietly outperforms the lunch peak
 It is the peak month of the year. New launches, upsell campaigns, and high-margin promotions should all be timed around this window when customers are in a spending mood.
 Dataset
 
-## Dataset
 
-- **Source:** [Pizza Place Sales — Kaggle](https://www.kaggle.com/datasets/nextmillionaire/pizza-sales-dataset)
-- **Period:** Full year 2015
-- **Records:** ~48,000 orders
+
