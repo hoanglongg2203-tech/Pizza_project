@@ -13,7 +13,7 @@ A personal portfolio project analyzing the full-year 2015 sales data of a pizza 
 
  ## **Tools Used**
 
-- **SQL** — Extracted and prepared raw data from the dataset
+### SQL — Extracted and prepared raw data from the dataset
   
  ```sql
 -- Extract core sales data for analysis
@@ -29,9 +29,9 @@ A personal portfolio project analyzing the full-year 2015 sales data of a pizza 
   FROM pizza_sales
 ```
 
-- **Power BI** — Built a 3-page interactive dashboard
+### Power BI — Built a 3-page interactive dashboard
 
-- **DAX Measures** — Custom measures including MoM % growth and other performance metrics
+### DAX Measures — Custom measures including MoM % growth and other performance metrics
 ```
 Avg Value per Order =
 SUM(pizza_sales[total_price])/DISTINCTCOUNT(pizza_sales[order_id])
@@ -50,24 +50,24 @@ Metric = {("Sales", NAMEOF('pizza_sales'[Sales]), 0),
 ("Orders", NAMEOF('pizza_sales'[Orders]), 2)}
 ```
 
-## **Dashboard**
+## Dashboard
 
 [View Full Dashboard Walkthrough](https://drive.google.com/file/d/1vMTaH0Z4zQlUux4a4cUFQ7Tl4f-TrMrp/view?usp=sharing)
 
-## **Data insights**
+## Data insights
 
-### **Page 1: Sales Overview**
+### Page 1: Sales Overview**
 
-**Provides a high-level snapshot of the business, highlighting key revenue drivers**
+#### Provides a high-level snapshot of the business, highlighting key revenue drivers
 - Large size dominates both revenue and quantity, suggesting most orders are group-oriented.
 - Classic category leads overall, primarily due to its lower price point rather than strong preference.
 - Small size and Veggie category consistently underperform across both revenue and quantity, indicating weak positioning.
   
 <img width="1409" height="792" alt="image" src="https://github.com/user-attachments/assets/7fc28d7b-8bd8-4c24-a8e1-77af72c24a1d" />
 
-### **Page 2: Monthly Performance**
+### Page 2: Monthly Performance
 
-**Analyzes how the business performs over time**
+#### Analyzes how the business performs over time
 - July is the strongest revenue month, indicating a clear seasonal demand peak.
 - Overall demand remains stable, with no significant long-term decline.
 - February shows the largest drop (-6.6%), followed by a strong recovery in March (+8.0%).
@@ -76,34 +76,34 @@ Metric = {("Sales", NAMEOF('pizza_sales'[Sales]), 0),
 <img width="1411" height="790" alt="image" src="https://github.com/user-attachments/assets/09d6aff8-632b-477f-8543-1cf9075a3768" />
 
 
-### **Page 3: Customer Behavior**
+### Page 3: Customer Behavior
 
-**Examines when customers order and how their behavior changes**
+#### Examines when customers order and how their behavior changes
 - Lunch (12:00–13:00) is the busiest time on weekdays, indicating typical lunch rush behavior.
 - On weekends, the pattern shifts, with dinner (17:00–19:00) outperforming lunch.
 - Friday is the strongest day overall, especially during peak months (May–July).
 - Wednesday shows lower average order value despite stable sales, suggesting customers purchase more low-priced items rather than higher-value orders.
 <img width="1408" height="794" alt="image" src="https://github.com/user-attachments/assets/0c05b97a-bfff-4c43-beca-468c2e514a81" />
 
-## **Recommendations**
+## Recommendations
 
-**Address the size imbalance** 
+### Address the size imbalance
 
 The Small size is clearly underperforming in both revenue and quantity. Instead of heavy discounting, offering a “Buy 1 Get 1” deal or bundling it with a drink could encourage trial. If successful, this strategy could be scaled long term.
 
-**Give Chicken and Supreme more spotlight**
+### Give Chicken and Supreme more spotlight
 
 These categories perform similarly to Classic but at higher price points, indicating stronger margins. Increasing their visibility through promotions or combo deals could shift demand toward higher-value orders.
 
-**Give Veggie a clearer identity**
+### Give Veggie a clearer identity
 
 Veggie pizzas lack clear positioning. Instead of broad discounts, targeted campaigns such as “Meatless Monday” or health-focused messaging could attract a niche but loyal customer base.
 
-**Capture the weekend dinner window**
+### Capture the weekend dinner window
 
 The 17:00–19:00 time slot on weekends outperforms lunch but receives less marketing attention. Targeted promotions during late afternoons could significantly improve revenue.
 
-**Capitalize on July** 
+### Capitalize on July
 
 As the peak month, July presents the best opportunity for high-impact strategies such as new product launches, upselling campaigns, and premium promotions.
 
