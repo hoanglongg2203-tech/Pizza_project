@@ -4,7 +4,7 @@ Project Overview
 A personal portfolio project analyzing the full-year 2015 sales data of a pizza restaurant. The goal was to go beyond the numbers, understand what was actually happening in the business, and turn those findings into practical recommendations.
 ## Dataset
 
-- **Source:** [Pizza Place Sales — Kaggle](https://www.kaggle.com/datasets/nextmillionaire/pizza-sales-dataset)
+- **Source:** [Pizza Sales Dataset — Kaggle](https://www.kaggle.com/datasets/nextmillionaire/pizza-sales-dataset)
 - **Period:** Full year 2015
 
  ## **Tools Used**
