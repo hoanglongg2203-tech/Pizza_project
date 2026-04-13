@@ -53,7 +53,7 @@ FROM pizza_sales
 - Data loaded directly into Power BI
 - No major data quality issues detected
 
-##Key DAX Measures
+## Key DAX Measures
 ```
 -- Average revenue per order
 Avg Value per Order =
