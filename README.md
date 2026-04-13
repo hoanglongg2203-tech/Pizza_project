@@ -24,9 +24,6 @@ A personal portfolio project analyzing the full-year 2015 sales data of a pizza 
       quantity
   FROM pizza_sales
 ```
-
-### Power BI — Built a 3-page interactive dashboard
-
 ### DAX Measures — Custom measures including MoM % growth and other performance metrics
 ```
 Avg Value per Order =
@@ -46,13 +43,16 @@ Metric = {("Sales", NAMEOF('pizza_sales'[Sales]), 0),
 ("Orders", NAMEOF('pizza_sales'[Orders]), 2)}
 ```
 
+### Power BI — Designed and developed a 3-page interactive data visualization dashboard
+
+
 ## Dashboard
 
 [View Full Dashboard Walkthrough](https://drive.google.com/file/d/1vMTaH0Z4zQlUux4a4cUFQ7Tl4f-TrMrp/view?usp=sharing)
 
 ## Data insights
 
-### Page 1: Sales Overview**
+### Page 1: Sales Overview
 
 #### Provides a high-level snapshot of the business, highlighting key revenue drivers
 - Large size dominates both revenue and quantity, suggesting most orders are group-oriented.
@@ -66,7 +66,6 @@ Metric = {("Sales", NAMEOF('pizza_sales'[Sales]), 0),
 #### Analyzes how the business performs over time
 - July is the strongest revenue month, indicating a clear seasonal demand peak.
 - Overall demand remains stable, with no significant long-term decline.
-- February shows the largest drop (-6.6%), followed by a strong recovery in March (+8.0%).
 - Consecutive declines in September and October suggest a potential seasonal slowdown that should be monitored.
   
 <img width="1411" height="790" alt="image" src="https://github.com/user-attachments/assets/09d6aff8-632b-477f-8543-1cf9075a3768" />
