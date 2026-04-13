@@ -1,19 +1,15 @@
 # Pizza Restaurant Sales Performance Analysis
-## Executive Summary
-
-This project analyzes a full year of pizza sales data to uncover key revenue drivers, customer behavior patterns, and growth opportunities.
-The results show that while overall demand remains stable, revenue can be further optimized by improving product mix, targeting high-margin categories, and leveraging peak ordering periods.
-
 ## Project Overview
 A personal portfolio project analyzing the full-year 2015 sales data of a pizza restaurant. The goal was to go beyond the numbers, understand what was actually happening in the business, and turn those findings into practical recommendations.
 ## Dataset
 
 - **Source:** [Pizza Sales Dataset — Kaggle](https://www.kaggle.com/datasets/nextmillionaire/pizza-sales-dataset)
 - **Period:** Full year 2015
-
+- **File:** [raw_data.csv](https://github.com/user-attachments/files/26668712/raw_data.csv)
+  
  ## **Tools Used**
 
-### SQL — Extracted and prepared raw data from the dataset
+### SQL(MS SQL) — Extracted and prepared raw data from the dataset
   
  ```sql
 -- Extract core sales data for analysis
