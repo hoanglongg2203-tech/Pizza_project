@@ -1,52 +1,82 @@
-# Pizza Restaurant Sales Performance Analysis
-## Project Overview
-A personal portfolio project analyzing the full-year 2015 sales data of a pizza restaurant. The goal was to go beyond the numbers, understand what was actually happening in the business, and turn those findings into practical recommendations.
+# Pizza Restaurant Sales Performance | Power BI 
+## Business Context
+
+Despite having a full year of sales data, the restaurant still lacked clear visibility into what actually drives revenue and customer behavior.
+This project focuses on turning raw transactional data into meaningful insights and more importantly, translating those insights into practical business actions.
+## Problem Statement
+**The business had data, but couldn’t confidently answer key questions:**
+
+- Which products and sizes truly drive revenue, not just volume?
+- Are there seasonal trends that should influence planning?
+- When do customers actually order — and how does that change over time?
+## Objectives
+**Build a 3-page interactive dashboard for business users.**
+- Track core KPIs:
+- Total Sales
+- Order Count
+- Total Quantity
+- Average Order Value
+- Average Sales per Day
+- Month-over-Month Growth
 ## Dataset
 
 - **Source:** [Pizza Sales Dataset — Kaggle](https://www.kaggle.com/datasets/nextmillionaire/pizza-sales-dataset)
 - **Period:** Full year 2015
 - **File:** [raw_data.csv](https://github.com/user-attachments/files/26668712/raw_data.csv)
-  
- ## **Tools Used**
 
-### SQL(MS SQL) — Extracted and prepared raw data from the dataset
+##  Tools & Tech Stack
+- Power BI — dashboard development & data modeling
+- DAX — KPI calculations, time intelligence
+- SQL (MS SQL Server) — data extraction
+## Key Technical Highlights
+- Built time-intelligence measures (MoM growth, daily averages)
+
+- Designed a clean data model with a DAX calendar table
+
+- Used field parameters to enable dynamic metric switching (Sales / Orders / Quantity)
+
+- Wrote SQL to extract and structure analysis-ready data
   
- ```sql
--- Extract core sales data for analysis
-  SELECT 
-      order_date,
-      order_time,
-      pizza_category,
-      pizza_size,
-      pizza_name,
-      unit_price,
-      total_price,
-      quantity
-  FROM pizza_sales
+## Data Preparation
 ```
-### DAX Measures — Custom measures including MoM % growth and other performance metrics
+SELECT 
+    order_date,
+    order_time,
+    pizza_category,
+    pizza_size,
+    pizza_name,
+    unit_price,
+    total_price,
+    quantity
+FROM pizza_sales
 ```
+- Data loaded directly into Power BI
+- No major data quality issues detected
+
+##Key DAX Measures
+```
+-- Average revenue per order
 Avg Value per Order =
-SUM(pizza_sales[total_price])/DISTINCTCOUNT(pizza_sales[order_id])
+SUM(pizza_sales[total_price]) / DISTINCTCOUNT(pizza_sales[order_id])
 
-Avg Sales per Day = 
+-- Average daily revenue
+Avg Sales per Day =
 DIVIDE(SUM('pizza_sales'[total_price]), DISTINCTCOUNT('pizza_sales'[order_date]))
 
-MoM % = 
+-- Month-over-Month growth %
+MoM % =
 VAR Prev = [Prev month sales]
 RETURN
-IF(OR(ISBLANK(Prev), Prev = 0),BLANK(),
-DIVIDE([Total Sales] - Prev, Prev))
+IF(OR(ISBLANK(Prev), Prev = 0), BLANK(),
+   DIVIDE([Total Sales] - Prev, Prev))
 
-Metric = {("Sales", NAMEOF('pizza_sales'[Sales]), 0),
-("Quantity", NAMEOF('pizza_sales'[Sum Quantity]), 1),
-("Orders", NAMEOF('pizza_sales'[Orders]), 2)}
+-- Dynamic metric switcher (field parameter)
+Metric = {
+    ("Sales",    NAMEOF('pizza_sales'[Sales]),        0),
+    ("Quantity", NAMEOF('pizza_sales'[Sum Quantity]), 1),
+    ("Orders",   NAMEOF('pizza_sales'[Orders]),       2)}
 ```
-
-### Power BI — Designed and developed a 3-page interactive data visualization dashboard
-
-
-## Dashboard
+## Dashboard Walkthrough
 
 [View Full Dashboard Walkthrough](https://drive.google.com/file/d/1vMTaH0Z4zQlUux4a4cUFQ7Tl4f-TrMrp/view?usp=sharing)
 
