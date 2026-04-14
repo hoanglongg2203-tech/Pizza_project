@@ -60,13 +60,13 @@ Metric = {
 ### 4. DAX Measures
 ```
 -- Total Order
-Orders = DISTINCTCOUNT ( pizza_sales[order_id] )
+Total Orders = DISTINCTCOUNT ( pizza_sales[order_id] )
 
 -- Total Sales
 Total Sales = SUM(pizza_sales[total_price])
 
 -- Total Quantity 
-Quantity = SUM(pizza_sales[quantity])
+Total Quantity = SUM(pizza_sales[quantity])
 
 -- Average revenue per order
 Avg Value per Order =
