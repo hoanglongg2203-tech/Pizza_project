@@ -5,16 +5,13 @@ Despite having a full year of sales data, the restaurant still lacked clear visi
 This project focuses on turning raw transactional data into meaningful insights and more importantly, translating those insights into practical business actions.
 ## Problem Statement
 **The business had access to data but lacked clear insights to answer key questions.**
-- Data Extraction & Cleaning: Extracted transactional data using SQL and cleaned 48,620 records in
-Power Query, standardizing formats and removing duplicates to ensure data integrity.
-- Data Modeling: Developed a relational data model in Power BI, including a custom calendar table
-and optimized relationships to support time-series analysis across orders, categories, and sizes.
-- Business Intelligence: Built a 3-page interactive dashboard with dynamic metric selection and key
-DAX measures, identifying revenue drivers, seasonal trends, and customer ordering patterns.
+- Which products and sizes truly drive revenue, not just volume?
+- Are there seasonal trends that should influence planning decisions?
+- When do customers actually order and how does that change over time?
 ## Objectives
-- Develop a 3-page interactive dashboard for business users to track key performance metrics.
-- Analyze sales data to uncover trends, seasonal patterns, and performance drivers.
-- Deliver data-driven recommendations to optimize revenue and business strategy.
+- Data Extraction & Cleaning: Extracted transactional data using SQL and cleaned 48,620 records in Power Query, standardizing formats and removing duplicates to ensure data integrity.
+- Data Modeling: Developed a relational data model in Power BI, including a custom calendar table and optimized relationships to support time-series analysis across orders, categories, and sizes.
+- Business Intelligence: Built a 3-page interactive dashboard with dynamic metric selection  and key DAX measures, identifying revenue drivers, seasonal trends, and customer ordering patterns.
 ## Dataset
 - **Source:** [Pizza Sales Dataset — Kaggle](https://www.kaggle.com/datasets/nextmillionaire/pizza-sales-dataset)
 - **Period:** Full year 2015
