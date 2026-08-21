@@ -12,11 +12,8 @@ This project focuses on turning raw transactional data into meaningful insights 
 - Data Extraction & Cleaning: Extracted transactional data using SQL and cleaned 48,620 records in Power Query, standardizing formats and removing duplicates to ensure data integrity.
 - Data Modeling: Developed a relational data model in Power BI, including a custom calendar table and optimized relationships to support time-series analysis across orders, categories, and sizes.
 - Business Intelligence: Built a 3-page interactive dashboard with dynamic metric selection  and key DAX measures, identifying revenue drivers, seasonal trends, and customer ordering patterns.
-## Dataset
-- **Source:** [Pizza Sales Dataset — Kaggle](https://www.kaggle.com/datasets/nextmillionaire/pizza-sales-dataset)
-- **Period:** Full year 2015
-- **File:** [raw_data.csv](https://github.com/user-attachments/files/26668712/raw_data.csv)
-##  Tools & Tech Stack
+
+##  Tools 
 - Power BI — dashboard development & data modeling.
 - DAX — KPI calculations, time intelligence.
 - SQL (MS SQL Server) — data extraction.
