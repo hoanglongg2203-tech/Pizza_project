@@ -32,7 +32,10 @@ SELECT
     total_price,
     quantity
 FROM pizza_sales
+
 ```
+Additional exploratory queries (KPI checks, top 5 best-sellers, etc.) used to validate the data before dashboard design are available in [sql_cript](https://github.com/user-attachments/files/31327826/sql_cript.txt)
+
 - Data loaded directly into Power BI
 - No major data quality issues detected
 ### 2. Data Modeling
