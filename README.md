@@ -17,10 +17,6 @@ This project focuses on turning raw transactional data into meaningful insights 
 - Power BI — dashboard development & data modeling.
 - DAX — KPI calculations, time intelligence.
 - SQL (MS SQL Server) — data extraction.
-## Download
-📥 Raw dataset (raw_data.csv)
-📊 Power BI dashboard (dashboard.pbix) (requires Power BI Desktop to open)
-📄 SQL extraction script
 
 ## Data Preparation & Modeling Process
   
