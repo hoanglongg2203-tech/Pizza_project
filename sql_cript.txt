@@ -1,0 +1,87 @@
+
+
+--KPI--
+--1.Total sales--
+select sum(total_price) as Total_Sales
+from `ace-mission-462904-d7.PIZZA.pizza`  
+--2.AVg order value--
+select sum(total_price)/ count(distinct order_id) as Avg_Order_Value
+from `ace-mission-462904-d7.PIZZA.pizza` 
+--3.Total orders-- 
+select count(distinct order_id) as Total_Order
+from `ace-mission-462904-d7.PIZZA.pizza`
+--4. Total quantity-- 
+select sum(quantity) as Total_Quantity
+from `ace-mission-462904-d7.PIZZA.pizza`  
+
+--Sales by size-- 
+select pizza_size, sum(total_price) as Total_Sales
+from `ace-mission-462904-d7.PIZZA.pizza`
+group by pizza_size 
+
+--Total quanity by size--
+select pizza_size, sum(quantity)  as Total_Quantity
+from `ace-mission-462904-d7.PIZZA.pizza`
+group by pizza_size 
+
+--Top 5 pizza by sales--
+select pizza_name,sum(total_price) as Total_Sales
+from `ace-mission-462904-d7.PIZZA.pizza` 
+group by pizza_name
+order by Total_Sales desc
+limit 5 
+
+--Sales by category table--
+select
+pizza_category,
+pizza_size,
+round(sum(total_price), 1) as Total_Sales,
+    round(sum(total_price) / sum(sum(total_price)) over () * 100, 2) as pct_total_sales,
+    round(avg(unit_price), 2) as avg_unit_price,
+    sum(quantity) as quantity_sold
+from `ace-mission-462904-d7.PIZZA.pizza`
+group by pizza_category, pizza_size
+order by pizza_category, total_sales desc 
+
+--Sales by Day-- 
+select 
+extract(month from order_date) as Month,
+extract(day from order_date ) as Day,
+round(sum(total_price),1) as Total_Sales
+from `ace-mission-462904-d7.PIZZA.pizza` 
+group by  Month, Day
+
+--Sales by month with MoM%--
+with monthly_sales as (
+select
+extract(month from order_date)      as month_num,
+format_date('%b', order_date)       as month_name,
+round(sum(total_price), 0)          as total_sales
+from `ace-mission-462904-d7.PIZZA.pizza`
+group by month_num, month_name)
+select
+month_num,
+month_name,
+total_sales,
+round((total_sales - lag(total_sales) over (order by month_num))/ lag(total_sales) over (order by month_num) * 100, 2)   as pct_growth_mom
+from monthly_sales
+order by month_num 
+
+--Peak Sales Time--
+with daily_sales as (
+    select
+        order_date,
+        format_date('%a', order_date)       as day_of_week,
+        format_date('%b', order_date)       as month_name,
+        sum(total_price)                    as total_sales_per_day
+    from `ace-mission-462904-d7.PIZZA.pizza`
+    group by order_date, day_of_week, month_name)
+
+select
+    day_of_week,
+    month_name,
+    round(avg(total_sales_per_day), 0)      as avg_sales_per_day
+from daily_sales
+group by day_of_week, month_name
+order by
+ day_of_week
