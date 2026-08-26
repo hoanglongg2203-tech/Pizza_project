@@ -14,9 +14,9 @@ This project focuses on turning raw transactional data into meaningful insights 
 - Business Intelligence: Built a 3-page interactive dashboard with dynamic metric selection  and key DAX measures, identifying revenue drivers, seasonal trends, and customer ordering patterns.
 
 ##  Tools 
-- Power BI — dashboard development & data modeling.
-- DAX — KPI calculations, time intelligence.
-- SQL (MS SQL Server) — data extraction.
+- Power BI - dashboard development & data modeling.
+- DAX - KPI calculations, time intelligence.
+- SQL (MS SQL Server, Google Bigquery) - data extraction, additional exploratory queries.
 
 ## Data Preparation & Modeling Process
   
